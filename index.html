@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXORA business management dashboard demo">
+  <title>NEXORA | Business Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="brand"><span class="brand-mark">N</span><span>NEXORA</span></div>
+      <div class="workspace-switcher"><span class="workspace-dot"></span><span>Acme Fitness</span><span class="chevron">⌄</span></div>
+      <p class="nav-label">Workspace</p>
+      <nav class="primary-nav">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span><span>Dashboard</span></button>
+        <button class="nav-item" data-view="customers"><span class="nav-icon">♙</span><span>Customers</span></button>
+        <button class="nav-item" data-view="products"><span class="nav-icon">▦</span><span>Products</span></button>
+        <button class="nav-item" data-view="orders"><span class="nav-icon">≡</span><span>Orders</span></button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="plan-card"><div><strong>Free trial</strong><span>14 days remaining</span></div><span class="plan-arrow">→</span></div>
+        <div class="profile-row"><div class="avatar avatar-small">AY</div><div class="profile-copy"><strong>Aymene Y.</strong><span>Administrator</span></div><button class="icon-button sidebar-more" aria-label="Profile menu">•••</button></div>
+        <button class="logout-button" id="logoutButton"><span>↪</span> Log out</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <div class="mobile-brand"><span class="brand-mark">N</span>NEXORA</div>
+        <div class="topbar-actions">
+          <label class="global-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search anything..." aria-label="Search anything"></label>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notifications"><span>♢</span><i></i></button>
+          <div class="top-profile"><div class="avatar">AY</div><div><strong>Aymene Y.</strong><span>Admin</span></div><span class="chevron">⌄</span></div>
+        </div>
+      </header>
+
+      <div class="page-container" id="pageContainer"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-root" id="modalRoot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
